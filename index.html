@@ -1,9 +1,15 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-4ZPLezkTZTsojWFhpdFembdzFudphhoOzIunR1wH6g1WQDzCAiPvDyitaK67mp0+" crossorigin="anonymous">
         <style>
             body {
                 filter: contrast(1.5) saturate(1.1);
+                margin: 0;
             }
+            div {
+                margin: 0;
+                padding: 0;               
+             }
             video#herovid {
                 position: fixed; right: 0; bottom: 0;
                 min-width: 100%; min-height: 100%;
@@ -24,6 +30,8 @@
                 width: 100%;
                 text-align: center;
                 padding: 0%;
+                border: .5rem #dc9e23 solid;
+                box-sizing: border-box;
             }
             #title {
                 font-size: 116px;
@@ -33,13 +41,13 @@
         </style>
     </head>
     <body>
-        <div class="hero-container">
-            <h1 id="title">AU The Golden Boy</h1>
-        </div>
         <video controls autoplay id="herovid" muted loop playsinline style="pointer-events: none;">
             <source src="https://s3-us-west-2.amazonaws.com/authegolden.com/oakland.mp4" type="video/mp4">
             Your device does not support this badass video.
         </video>
+        <div class="hero-container">
+            <h1 id="title">AU The Golden Boy</h1>
+        </div>
         <script>
             document.getElementById('herovid').play();
         </script>
