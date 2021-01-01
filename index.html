@@ -2,6 +2,18 @@
     <head>
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-4ZPLezkTZTsojWFhpdFembdzFudphhoOzIunR1wH6g1WQDzCAiPvDyitaK67mp0+" crossorigin="anonymous">
         <style>
+            @font-face {
+                font-family: 'StoneWalls';
+                src: url("/StoneWalls.ttf") format("ttf");
+                    font-weight: 300;
+                    font-style: normal;
+            }
+            @keyframes rotating-border {
+                0% { border-bottom-color: #dc9e23;}
+                25% { border-left-color: #dc9e23;}
+                50% { border-top-color: #dc9e23;}
+                100% { border-right-color: #dc9e23;}
+            }
             body {
                 filter: contrast(1.5) saturate(1.1);
                 margin: 0;
@@ -21,6 +33,8 @@
                 }
             }
             .hero-container {
+                animation: rotating-border 20s linear;
+                animation-iteration-count: infinite;
                 position: fixed;
                 top: 0;
                 height: 100%;
@@ -30,20 +44,24 @@
                 width: 100%;
                 text-align: center;
                 padding: 0%;
-                border: .5rem #dc9e23 solid;
+                border: .5rem #000000 solid;
+                border-radius: 50%;
                 box-sizing: border-box;
+                z-index: 9999999;
             }
             #title {
                 font-size: 116px;
                 color: #dc9e23;
-                z-index: 9999999;
+                border: solid #dc9e23 2px;  
+                border-radius: 50%;
+                font-family: 'StoneWalls', Helvetica, sans-serif;            
             }
         </style>
     </head>
     <body>
         <video controls autoplay id="herovid" muted loop playsinline style="pointer-events: none;">
             <source src="https://s3-us-west-2.amazonaws.com/authegolden.com/oakland.mp4" type="video/mp4">
-            Your device does not support this badass video.
+            Your shitty device does not support this badass video.
         </video>
         <div class="hero-container">
             <h1 id="title">AU The Golden Boy</h1>
