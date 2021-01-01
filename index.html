@@ -48,20 +48,30 @@
                 border: .5rem #000000 solid;
                 border-radius: 50%;
                 box-sizing: border-box;
+                opacity: 0.5;
                 z-index: 9999999;
             }
+            
             h2 {
                 font-size: 100px;
                 color: #dc9e23;
                 font-family: 'StoneWalls', Helvetica, sans-serif;    
-                position: absolute;    
+                position: relative;    
             }
             #title {
                 font-size: 150px;
                 color: #dc9e23;
                 border: solid #dc9e23 2px;  
                 border-radius: 50%;
-                font-family: 'StoneWalls', Helvetica, sans-serif;            
+                font-family: 'StoneWalls', Helvetica, sans-serif;  
+                padding: 0.2em 0 0;          
+            }
+            @media only screen and (max-width: 749px) {
+                h1 {
+                    font-size: 25w;
+                }
+
+                
             }
             #title1 {
                 
@@ -83,10 +93,9 @@
             Your shitty device does not support this badass video.
         </video>
         <div class="hero-container">
-            <h2 id="title1">AU</h2>
-            <h2 id="title2">THE</h2>
-            <h2 id="title3">GOLDEN</h2>
-            <h2 id="title4">BOY</h2>
+            <h1 id="title">AU</h1>
+            <h2 id="title1">THE</h2>
+            <h2 id="title2">GOLDEN BOY</h2>
         </div>
         <script>
             document.getElementById('herovid').play();
